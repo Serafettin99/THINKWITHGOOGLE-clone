@@ -191,6 +191,7 @@ h1 {
 
 .pictures img {
     width: 100%;
+    
 }
 
 .content {
@@ -223,9 +224,13 @@ h1 {
 .cards h4 {
     font-size: 1.1rem;
     font-weight: 500;
-    text-align: center;
+    margin: 0;
+    
 }
-
+.why h4 {
+    text-align: center;
+    
+}
 
  
 .inside h4, .inside p {
@@ -288,8 +293,12 @@ h1 {
     text-align: left;
 }
 
+.col-cards svg {
+    margin-right: 10px;
+}
+
 .tools {
-    height: 24.35rem;
+    min-height: 26.35rem;
     justify-content: flex-start;
     background-color: white;
 }
@@ -298,6 +307,10 @@ h1 {
     justify-content: space-between;
     padding: 10px 20px;
     align-items: flex-start;
+}
+
+.tools h4 {
+    margin:0;
 }
 
 .tools footer {
@@ -362,7 +375,8 @@ option {
 ul {
     display:flex;
     list-style-type: none;
-    padding: 8px; /*eger icon kullanilacaksa padding kaldirilabilir*/
+    padding: 8px;
+    flex-wrap: wrap;
     
 }
 
@@ -392,10 +406,10 @@ li {
     box-shadow:  0px -1px 2px 1px#e9e9e9;
 }
 
-.cons:hover {
+/* .cons:hover {
     border-radius: 0;
     box-shadow: 0 0 0 0;
-}
+} */
 
 .submenu {
     display: none;
@@ -484,6 +498,9 @@ li {
         display:none;
     }
 
+    header {
+        background-color: transparent;
+    }
     .top-logo .material-icons {
         display: inline;
     }
@@ -548,14 +565,21 @@ li {
         justify-content: space-between;
     }
 
+    .google {
+        flex-direction: column;
+    }
 }
+
+
 
 
 @media screen and (max-width:600px) {
    header select, .top-right, .abs-2, .abs-1 h6, .abs-1 a, .latest h1, .col-cards p {
         display:none;
     }
-
+    header {
+        background-color: transparent;
+    }
     .top-logo .material-icons {
         display: inline;
         }
@@ -645,9 +669,11 @@ li {
         margin-bottom: 0;
         border-bottom: 0;
     }
+
     .google {
         flex-direction: column;
     }
+    
     ul {
         flex-wrap: wrap;
         padding: 8px 0;
