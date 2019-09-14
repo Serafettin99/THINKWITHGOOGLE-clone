@@ -1,7 +1,3 @@
-/***** test for icon-recovery branch ******/
-
-
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -39,6 +35,7 @@ header {
 
 .menu {
     padding: 1.1rem 1rem;
+    display: flex;
 }
 
 
@@ -82,13 +79,6 @@ select {
     cursor: pointer;
 }
 
-/* 
-select::after {
-    content: "";
-    background: url(https://www.edcast.com/corp/wp-content/uploads/2016/03/Arrow-down-white.png);
-    -webkit-column-break-before
-} */
-
 .insight {
     background-image: url(https://storage.googleapis.com/twg-content/images/tms-hero3_1.2e16d0ba.fill-1440x432.jpegquality-85.jpg);
     width: 100%;
@@ -120,8 +110,6 @@ h1, h6 {
     line-height: 3.1rem;
     width: 50%;
 }
-
-
 
 .abs-1 a {
     background-color:#3367d6;
@@ -185,13 +173,13 @@ h1 {
     transition: box-shadow .2s cubic-bezier(.4,0,.2,1);
     cursor: pointer;
 }
+
 .cards:hover {
     box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,.11);
 }
 
 .pictures img {
     width: 100%;
-    
 }
 
 .content {
@@ -232,7 +220,6 @@ h1 {
     
 }
 
- 
 .inside h4, .inside p {
     color: #f3f3f3;
     font-weight: 500;
@@ -244,6 +231,7 @@ h1 {
     margin-block-start: 20px;
     margin-block-end: -50px;
 }
+
 .inside p {
     top: 250px;
     
@@ -285,6 +273,7 @@ h1 {
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.11) 0px 0.125rem 0.1875rem 0px, rgb(240, 240, 240) 0px 0.6875rem 0px -0.25rem, rgb(224, 224, 224) 0px 1.4375rem 0px -0.625rem;
 }
+
 .col-cards:hover {
     box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,.11), rgba(0, 0, 0, 0.11) 0px 0.125rem 0.1875rem 0px, rgb(240, 240, 240) 0px 0.6875rem 0px -0.25rem, rgb(224, 224, 224) 0px 1.4375rem 0px -0.625rem;
 }
@@ -338,7 +327,7 @@ h1 {
     padding: 3.875rem 0 1.5rem 0;
 }
 
-.get h1{
+.get h1 {
     color: white;
     margin-left: 12.5%;
 }
@@ -357,7 +346,6 @@ h1 {
     margin-bottom: 50px;
     padding-bottom: 50px;
     border-bottom: 1px solid #b5b0f7;
-    
 }
 
 .google {
@@ -365,19 +353,17 @@ h1 {
     margin: 0 4.5% 1rem 4.5%;
     border-top: 1px solid #b5b0f7;
     padding-top: 20px;
-    
 }
+
 option {
     color: #757575;
 }
-
 
 ul {
     display:flex;
     list-style-type: none;
     padding: 8px;
     flex-wrap: wrap;
-    
 }
 
 ul a {
@@ -406,10 +392,17 @@ li {
     box-shadow:  0px -1px 2px 1px#e9e9e9;
 }
 
-/* .cons:hover {
-    border-radius: 0;
-    box-shadow: 0 0 0 0;
-} */
+.up {
+    display:none;
+}
+
+.cons .menu:hover .up {
+   display:inherit;
+}
+
+.cons .menu:hover .down {
+    display:none;
+ }
 
 .submenu {
     display: none;
@@ -420,7 +413,7 @@ li {
     width: 14.325rem;
     border-radius: 3px;
     box-shadow:  0px 2px 2px 1px#e9e9e9;
-    right: 118px;
+    right:109px;
     top: 64px;
 }
 
@@ -433,7 +426,7 @@ li {
 }
 
 .data {
-    right: 300px;
+    right: 292px;
 }
 
 .exist {
@@ -441,6 +434,7 @@ li {
     height: 3rem;
     align-items: center;
 }
+
 .menu:hover .submenu {
    display: flex;
    flex-direction: column;
@@ -467,31 +461,11 @@ li {
     margin-left: 10px;
 }
 
-
-/* @media 600 1000 1180 */
-
-
-
 @media screen and (min-width: 1001px) and (max-width:1180px) {
     .top-right, .abs-2 {
         display:none;
     }
-
-    /* .insight {
-        /* min-height:393px; */
-        /* display: flex; */
-        /* flex: 1 1 auto;  insight section ini daraltirken yuksekliginin azalmasini ayarlayamadim 
-    } */
-
-
 }
-
-
-/* @media screen and (min-width: 1000px) and (max-width: 1096px) {
-    .insight {
-        height: 
-    }
-} */
 
 @media screen and (min-width: 600px) and (max-width:1001px) {
     header select, .top-right, .abs-2, .abs-1 h6, .abs-1 a, .latest h1 {
@@ -512,12 +486,10 @@ li {
     .cards {
         width: calc(50% - 32px);
         margin: 0 0 32px 32px;
-        /* justify-content:  */
     }
 
     h1 {
-        margin-left: 32px;
-        
+        margin-left: 32px; 
     }
 
     .photo {
@@ -553,7 +525,6 @@ li {
         width: 100%;
     }
 
-
     .cards img {
         height: 100%;
         width: 100%;
@@ -570,23 +541,23 @@ li {
     }
 }
 
-
-
-
 @media screen and (max-width:600px) {
    header select, .top-right, .abs-2, .abs-1 h6, .abs-1 a, .latest h1, .col-cards p {
         display:none;
     }
+
     header {
         background-color: transparent;
+        padding: 10px 0;
     }
     .top-logo .material-icons {
         display: inline;
-        }
+    }
 
     .photo {
         width: 100%;
     }
+
     .insight {
         background: none;
         background-color: #f5f5f5;
@@ -600,7 +571,6 @@ li {
     h1 {
         font-size: 1.625rem;
         margin-left: 8px;
-    
     }
 
     .abs-1 {
@@ -630,20 +600,14 @@ li {
 
     .pictures {
         width: 48%;
+        min-width: 5.3125rem;
     }
 
     .content h4 {      
         text-align: left;
     }
 
-    /* .cards .content {
-        flex-direction: column;
-        align-items: left; 
-        justify-content: space-between;
-    } */
-
-    .cards {
-        /* height: 24.35rem; */
+    .cards {      
         justify-content: flex-start;
         background-color: white;
     }
@@ -701,5 +665,9 @@ li {
 
     .google {
         margin: 0 8px 1rem 8px;
+    }
+
+    .abs-1 h1 {
+        margin-left: 8px;
     }
 }
